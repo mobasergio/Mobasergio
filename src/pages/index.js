@@ -1,12 +1,9 @@
 import React from "react"
-import MainHeader from "../components/MainHeader"
+import Layout from "../components/layout"
 import Content from "../components/Content"
-import Footer from "../components/Footer"
 
 export default () => (
-  <div id="container">
-    <MainHeader />
+  <Layout>
     <Content />
-    <Footer />
-  </div>
+  </Layout>
 )

@@ -1,9 +1,16 @@
-import React from 'react';
+import React from "react"
+import "./layout.css"
 import Logo from '../assets/logo.svg'
 import Menu from '../assets/menu.svg'
 
-const MainHeader = () => {
-  return ( 
+const sideBar = () => {
+  document.querySelector("header > div").classList.toggle("show");
+  document.querySelector("body").classList.toggle("disableScroll");
+  document.querySelector("main").classList.toggle("blur");
+}
+
+export default ({ children }) => (
+  <div id="container">
     <header>
       <nav>
         <div>
@@ -11,10 +18,10 @@ const MainHeader = () => {
             <img src={Logo} alt="" />
           </a>
         </div>
-        <div onClick="sideBar()">
+        <div onClick={sideBar}>
           <img src={Menu} alt="" />
         </div>
-        <div class="navigation">
+        <div className="navigation">
           <ol>
             <li><a href="#about">About</a></li>
             <li><a href="#work">Work</a></li>
@@ -34,7 +41,7 @@ const MainHeader = () => {
         </div>
       </div>
     </header>
-  );
-}
- 
-export default MainHeader;
+    {children}
+    <footer></footer>
+  </div>
+)
