@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Profile from '../assets/profile.jpg'
 import Folder from '../assets/folder.svg'
 import Github from '../assets/github.svg'
 import External from '../assets/external.svg'
 
 const Content = () => {
+  useEffect(() => {
+    var prevScrollpos = window.pageYOffset;
+
+    window.onscroll = function() {
+      var currentScrollPos = window.pageYOffset;
+      (prevScrollpos > currentScrollPos) ? document.querySelector("header").style.top = "0" : document.querySelector("header").style.top = "-100px";
+      currentScrollPos !== 0 ? document.querySelector("header").classList.add("navbarScroll") : document.querySelector("header").classList.remove("navbarScroll");
+      prevScrollpos = currentScrollPos;
+    }
+  })
+  
   return (
     <main>
 
