@@ -5,11 +5,9 @@
  */
 
 module.exports = {
-  siteMetadata: {
-    title: `Sergio Moreno | Frontend web developer`,
-  },
   plugins: [
     `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
