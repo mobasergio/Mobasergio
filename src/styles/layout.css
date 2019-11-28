@@ -357,6 +357,10 @@ main #about > div div:nth-of-type(2) > div a div {
   opacity: 0.5;
   z-index: 1;
 }
+main #about > div div:nth-of-type(2) > div a div:hover {
+  opacity: 0.2;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
 main #about > div div:nth-of-type(2) > div a img {
   width: 100%;
   border-radius: 3px;
@@ -506,18 +510,34 @@ footer {
   min-height: 100px;
   width: 100%;
 }
-@media screen {
+#notfound {
+  margin-top: 200px;
+  text-align: center;
 }
-@media screen and (min-width: 38em) {
-  #work > div {
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  #work > div > div {
-    width: 49% !important;
-    display: block;
-  }
+#notfound h1 {
+  font-size: 120px;
+  color: #64ffda;
+  font-family: "SFMono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  line-height: 1;
+}
+#notfound h2 {
+  font-size: 30px;
+  color: #e6f1ff;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+#notfound a {
+  color: #64ffda;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: "SFMono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  cursor: pointer;
+  border: 1px solid #64ffda;
+  border-radius: 3px;
+  padding: 1.25rem 1.75rem;
+  text-decoration: none;
+}
+@media screen {
 }
 @media screen and (min-width: 23.5em) {
   main section:nth-of-type(1) h2,
@@ -544,6 +564,23 @@ footer {
   }
   #about div div:nth-of-type(2) {
     width: 40%;
+  }
+  #notfound h1 {
+    font-size: 200px;
+  }
+  #notfound h2 {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 38em) {
+  #work > div {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #work > div > div {
+    width: 49% !important;
+    display: block;
   }
 }
 @media screen and (min-width: 48em) {
@@ -617,5 +654,13 @@ footer {
   }
   #contact h4 {
     font-size: 60px !important;
+  }
+}
+@media screen and (min-width: 75em) {
+  #notfound h1 {
+    font-size: 12vw;
+  }
+  #notfound h2 {
+    font-size: 3vw;
   }
 }

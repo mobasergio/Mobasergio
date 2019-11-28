@@ -1,5 +1,5 @@
 import React from "react"
-import "./layout.css"
+import "../styles/layout.css"
 import Logo from '../assets/logo.svg'
 import Menu from '../assets/menu.svg'
 
@@ -41,7 +41,9 @@ export default ({ children }) => (
         </div>
       </div>
     </header>
-    {children}
+    <main>
+      {children}
+    </main>
     <footer></footer>
   </div>
 )
