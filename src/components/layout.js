@@ -2,6 +2,7 @@ import React from "react"
 import "../styles/layout.css"
 import Logo from '../assets/logo.svg'
 import Menu from '../assets/menu.svg'
+import {Link} from "gatsby"
 
 const sideBar = () => {
   document.querySelector("header > div").classList.toggle("show");
@@ -9,23 +10,27 @@ const sideBar = () => {
   document.querySelector("main").classList.toggle("blur");
 }
 
+if (typeof window !== "undefined") {
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 export default ({ children }) => (
   <div id="container">
     <header>
       <nav>
         <div>
-          <a href="https://www.mobasergio.com" aria-label="Home">
+          <Link to="/" aria-label="Home">
             <img src={Logo} alt="" />
-          </a>
+          </Link>
         </div>
         <div onClick={sideBar}>
           <img src={Menu} alt="" />
         </div>
         <div className="navigation">
           <ol>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="/#about">About</Link></li>
+            <li><Link to="/#work">Work</Link></li>
+            <li><Link to="/#contact">Contact</Link></li>
           </ol>
         </div>
       </nav>
@@ -33,9 +38,9 @@ export default ({ children }) => (
         <div>
           <nav>
             <ol>
-              <li><a href="#about">About</a></li>
-              <li><a href="#work">Work</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><Link to="/#about" onClick={() => sideBar()}>About</Link></li>
+              <li><Link to="/#work" onClick={() => sideBar()}>Work</Link></li>
+              <li><Link to="/#contact" onClick={() => sideBar()}>Contact</Link></li>
             </ol>
           </nav>
         </div>

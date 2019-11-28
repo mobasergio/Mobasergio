@@ -1,5 +1,6 @@
 import React from 'react';
 import Profile from '../assets/profile.jpg'
+import Certificate from '../assets/certificate-fullstackopen.png'
 
 const About = () => {
   return (
@@ -16,7 +17,7 @@ const About = () => {
               </p>
               <p>
                 After 3 years of self directed learning and working as a freelancer I decided to take the
-                <a target="_blank" href="/assets/certificate-fullstackopen.png"> Full Stack open </a>
+                <a target="_blank" rel="noopener noreferrer" href={Certificate}> Full Stack open </a>
                 course, to do this portfolio and to start looking for a job.
               </p>
               <p>Here's a few technologies I've been working with recently:</p>
