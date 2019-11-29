@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
+import Favicon from "../assets/icon.png"
 
 const NotFoundPage = () => {
   return (
