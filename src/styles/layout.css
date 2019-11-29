@@ -145,6 +145,10 @@ body {
   font-size: 12px;
   font-family: "SFMono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
 }
+#container {
+  position: relative;
+  min-height: 100vh;
+}
 header {
   display: flex;
   position: fixed;
@@ -509,9 +513,11 @@ footer {
   background-color: #020c1b;
   min-height: 100px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 #notfound {
-  margin-top: 200px;
+  margin: 200px 0;
   text-align: center;
 }
 #notfound h1 {

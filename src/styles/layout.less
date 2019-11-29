@@ -89,6 +89,11 @@ body {
   }
 }
 
+#container {
+  position: relative;
+  min-height: 100vh;
+}
+
 header {
   display: flex;
   position: fixed;
@@ -471,10 +476,12 @@ footer {
   background-color: #020c1b;
   min-height: 100px;
   width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 #notfound{
-  margin-top: 200px;
+  margin: 200px 0;
   text-align: center;
   h1 {
     font-size: 120px;
