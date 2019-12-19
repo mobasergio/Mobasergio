@@ -116,6 +116,9 @@ body {
 .blur {
   filter: blur(5px) brightness(0.7);
 }
+a[href="empty"] {
+  display: none;
+}
 .navigation {
   display: none;
 }
@@ -405,9 +408,8 @@ main #work h3::after {
 }
 main #work > div {
   display: flex;
-  width: 100%;
   flex-wrap: wrap;
-  height: 300px;
+  width: 100%;
 }
 main #work > div > div {
   width: 100%;
@@ -582,10 +584,10 @@ footer {
   #work > div {
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
   #work > div > div {
     width: 49% !important;
+    margin: 0 0.5%;
     display: block;
   }
 }
@@ -649,10 +651,10 @@ footer {
   #work > div {
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
   #work > div > div {
-    width: 32.5% !important;
+    margin: 0 0.6%;
+    width: 32.1% !important;
     display: block;
   }
   #contact h3 {
