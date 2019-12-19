@@ -11,14 +11,14 @@ const About = () => {
             <div>
               <p>
                 Hello! I'm Sergio, a Frontend web developer based in Barcelona,
-                Spain who enjoys building things that live on the internet. I
+                Spain. Who enjoys building things that live on the internet. I
                 develop exceptional, intuitive, responsive, pixel-perfect
                 websites and web apps.
               </p>
               <p>
-                After 3 years of self directed learning and working as a freelancer I decided to take the
-                <a target="_blank" rel="noopener noreferrer" href={Certificate}> Full Stack open </a>
-                course, to do this portfolio and to start looking for a job.
+                After 4 years of self directed learning
+                (<a target="_blank" rel="noopener noreferrer" href={Certificate}>Full Stack Open</a>, <a target="_blank" rel="noopener noreferrer" href="https://frontendmasters.com/">Frontend Masters</a>)
+                and working for individuals as a freelancer I decided to do this portfolio, fill it with my best projects and to start looking for a job.
               </p>
               <p>Here's a few technologies I've been working with recently:</p>
             </div>

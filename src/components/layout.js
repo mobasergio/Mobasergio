@@ -23,7 +23,7 @@ export default ({ children }) => (
             <img src={Logo} alt="" />
           </Link>
         </div>
-        <div onClick={sideBar}>
+        <div onClick={sideBar} onKeyDown={sideBar} role="button" tabindex="0">
           <img src={Menu} alt="" />
         </div>
         <div className="navigation">
