@@ -13,7 +13,7 @@ const Hero = () => {
   })
 
   return (
-    <section>
+    <section id="hero">
       <h1>Hi, my name is</h1>
       <h2>Sergio Moreno.</h2>
       <h3>I build things for the web.</h3>

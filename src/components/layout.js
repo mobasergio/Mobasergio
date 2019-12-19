@@ -19,7 +19,7 @@ export default ({ children }) => (
     <header>
       <nav>
         <div>
-          <Link to="/" aria-label="Home">
+          <Link to="#hero" aria-label="Home">
             <img src={Logo} alt="" />
           </Link>
         </div>
