@@ -1,42 +1,45 @@
-.font-face(@font-family, @filepath, @font-weight, @font-style){
+.font-face(@font-family, @filepath, @font-weight, @font-style) {
   @font-face {
     font-family: @font-family;
-    src: url('@{filepath}.woff2') format('woff2'),
-         url('@{filepath}.woff') format('woff'),
-         url('@{filepath}.ttf')  format('truetype');
-    font-weight:@font-weight;
-    font-style:@font-style;
+    src: url("@{filepath}.woff2") format("woff2"),
+      url("@{filepath}.woff") format("woff"),
+      url("@{filepath}.ttf") format("truetype");
+    font-weight: @font-weight;
+    font-style: @font-style;
   }
 }
 
-.font-face('Calibre', '../fonts/Calibre/Calibre-Light', lighter, normal);
-.font-face('Calibre', '../fonts/Calibre/Calibre-Light', lighter, normal);
-.font-face('Calibre', '../fonts/Calibre/Calibre-LightItalic', lighter, italic);
-.font-face('Calibre', '../fonts/Calibre/Calibre-Medium', normal, normal);
-.font-face('Calibre', '../fonts/Calibre/Calibre-MediumItalic', normal, italic);
-.font-face('Calibre', '../fonts/Calibre/Calibre-Regular', normal, normal);
-.font-face('Calibre', '../fonts/Calibre/Calibre-RegularItalic', normal, italic);
-.font-face('Calibre', '../fonts/Calibre/Calibre-Semibold', bold, normal);
-.font-face('Calibre', '../fonts/Calibre/Calibre-SemiboldItalic', bold, italic);
+.font-face("Calibre", "../fonts/Calibre/Calibre-Light", lighter, normal);
+.font-face("Calibre", "../fonts/Calibre/Calibre-Light", lighter, normal);
+.font-face("Calibre", "../fonts/Calibre/Calibre-LightItalic", lighter, italic);
+.font-face("Calibre", "../fonts/Calibre/Calibre-Medium", normal, normal);
+.font-face("Calibre", "../fonts/Calibre/Calibre-MediumItalic", normal, italic);
+.font-face("Calibre", "../fonts/Calibre/Calibre-Regular", normal, normal);
+.font-face("Calibre", "../fonts/Calibre/Calibre-RegularItalic", normal, italic);
+.font-face("Calibre", "../fonts/Calibre/Calibre-Semibold", bold, normal);
+.font-face("Calibre", "../fonts/Calibre/Calibre-SemiboldItalic", bold, italic);
 
-.font-face('SFMono', '../fonts/SFMono/SFMono-Medium', normal, normal);
-.font-face('SFMono', '../fonts/SFMono/SFMono-MediumItalic', normal, italic);
-.font-face('SFMono', '../fonts/SFMono/SFMono-Regular', normal, normal);
-.font-face('SFMono', '../fonts/SFMono/SFMono-RegularItalic', normal, italic);
-.font-face('SFMono', '../fonts/SFMono/SFMono-Semibold', bold, normal);
-.font-face('SFMono', '../fonts/SFMono/SFMono-SemiboldItalic', bold, italic);
+.font-face("SFMono", "../fonts/SFMono/SFMono-Medium", normal, normal);
+.font-face("SFMono", "../fonts/SFMono/SFMono-MediumItalic", normal, italic);
+.font-face("SFMono", "../fonts/SFMono/SFMono-Regular", normal, normal);
+.font-face("SFMono", "../fonts/SFMono/SFMono-RegularItalic", normal, italic);
+.font-face("SFMono", "../fonts/SFMono/SFMono-Semibold", bold, normal);
+.font-face("SFMono", "../fonts/SFMono/SFMono-SemiboldItalic", bold, italic);
 
-@sfmono: "SFMono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
-@calibre: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+@sfmono: "SFMono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console",
+  Monaco, monospace;
+@calibre: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui,
+  BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #0A192F;
+  background-color: #0a192f;
   font-size: 18px;
   color: #8892b0;
   font-family: @calibre;
@@ -49,28 +52,34 @@ body {
 }
 .show {
   visibility: visible;
+  -webkit-transform: translateX(0vw);
   transform: translateX(0vw);
 }
 .navbarScroll {
   height: 70px;
+  -webkit-box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
   box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -10px;
   top: 0;
 }
 .blur {
+  -webkit-filter: blur(5px) brightness(0.7);
   filter: blur(5px) brightness(0.7);
 }
-a[href="empty"]{
+a[href="empty"] {
   display: none;
 }
 .navigation {
   display: none;
   ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     li {
       counter-increment: li;
       list-style-type: none;
       width: 100%;
       font-size: 13px;
+      -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
       margin: 0 10px;
       a {
@@ -82,8 +91,8 @@ a[href="empty"]{
         color: #64ffda;
       }
     }
-    li::before{
-      content: '0' counter(li) '.';
+    li::before {
+      content: "0" counter(li) ".";
       color: #64ffda;
       width: 100%;
       font-size: 12px;
@@ -98,18 +107,28 @@ a[href="empty"]{
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: fixed;
   width: 100%;
   height: 100px;
   padding: 0px 25px;
   z-index: 2;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   background-color: #0a192f;
+  -webkit-box-shadow: none;
   box-shadow: none;
   nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     position: relative;
     width: 100%;
@@ -121,10 +140,17 @@ header {
     }
   }
   > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     visibility: hidden;
+    -webkit-transform: translateX(70vw);
     transform: translateX(70vw);
     position: fixed;
     top: 0;
@@ -132,6 +158,7 @@ header {
     right: 0;
     width: 70vw;
     height: 100vh;
+    -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     background-color: #172a45;
     nav {
@@ -143,17 +170,18 @@ header {
           font-size: 16px;
           text-align: center;
           padding: 14px 0;
+          -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
           transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
           a {
             text-decoration: none;
-            color: #8892B0;
+            color: #8892b0;
           }
           a:hover {
             color: #64ffda;
           }
         }
-        li::before{
-          content: '0' counter(li) '.';
+        li::before {
+          content: "0" counter(li) ".";
           display: inline-block;
           padding-bottom: 8px;
           color: #64ffda;
@@ -168,14 +196,22 @@ header {
 
 main {
   padding: 0 25px;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   overflow-x: hidden;
   section {
     margin: 0 auto;
     max-width: 1000px;
     padding: 100px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100vh;
   }
@@ -186,7 +222,7 @@ main {
       font-size: 13px;
       font-weight: lighter;
       font-family: @sfmono;
-      margin: 0px 0px 10px 3px;  
+      margin: 0px 0px 10px 3px;
     }
     h2 {
       font-size: 40px;
@@ -225,6 +261,7 @@ main {
         border-radius: 3px;
         padding: 1.25rem 1.75rem;
         text-decoration: none;
+        -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
       }
       a:hover {
@@ -234,7 +271,7 @@ main {
   }
   #about {
     h3::before {
-      content: '01.';
+      content: "01.";
       display: inline-block;
       color: #64ffda;
       margin: -6px 28px 0 0;
@@ -243,7 +280,11 @@ main {
       font-size: 18px;
     }
     h3 {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       color: #e6f1ff;
       font-family: @calibre;
@@ -312,6 +353,7 @@ main {
         > div {
           a {
             display: block;
+            -webkit-box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
             box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
             width: 100%;
             position: relative;
@@ -326,6 +368,8 @@ main {
             }
             div:hover {
               opacity: 0.2;
+              -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)
+                0s;
               transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
             }
             img {
@@ -341,7 +385,7 @@ main {
   #work {
     height: 1000px;
     h3::before {
-      content: '02.';
+      content: "02.";
       display: inline-block;
       color: #64ffda;
       margin: -6px 28px 0 0;
@@ -350,7 +394,11 @@ main {
       font-size: 18px;
     }
     h3 {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       color: #e6f1ff;
       font-family: @calibre;
@@ -371,16 +419,29 @@ main {
       margin-left: 20px;
     }
     > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       width: 100%;
       > div {
         width: 100%;
         min-height: 310px;
+        -webkit-box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
         box-shadow: rgba(2, 12, 27, 0.7) 0px 10px 30px -15px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
         position: relative;
         background-color: #172a45;
@@ -392,7 +453,11 @@ main {
           width: 100%;
         }
         #icons {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
           justify-content: space-between;
           margin-bottom: 30px;
           > div:nth-of-type(1) {
@@ -422,7 +487,10 @@ main {
           margin-bottom: 15px;
         }
         ul {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
           list-style-type: none;
           font-size: 12px;
@@ -476,6 +544,7 @@ main {
       text-decoration: none;
       color: #64ffda;
       margin: 0 auto;
+      -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     }
     a:hover {
@@ -492,7 +561,7 @@ footer {
   bottom: 0;
 }
 
-#notfound{
+#notfound {
   margin: 200px 0;
   text-align: center;
   h1 {
@@ -524,7 +593,8 @@ footer {
   // 376px
   @media (min-width: 23.5em) {
     main section:nth-of-type(1) {
-      h2, h3 {
+      h2,
+      h3 {
         font-size: 50px;
       }
     }
@@ -541,7 +611,8 @@ footer {
       padding: 0 50px;
     }
     main section:nth-of-type(1) {
-      h2, h3 {
+      h2,
+      h3 {
         font-size: 60px;
       }
       div:nth-of-type(1) {
@@ -553,7 +624,7 @@ footer {
         width: 40%;
       }
     }
-    #notfound{
+    #notfound {
       h1 {
         font-size: 200px;
       }
@@ -567,6 +638,7 @@ footer {
     #work {
       > div {
         width: 100%;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         > div {
           width: 49% !important;
@@ -591,7 +663,8 @@ footer {
       h1 {
         font-size: 14px;
       }
-      h2, h3 {
+      h2,
+      h3 {
         font-size: 70px;
       }
     }
@@ -606,6 +679,8 @@ footer {
         width: 300px !important;
       }
       > div {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
       }
       div div:nth-of-type(2) {
@@ -639,13 +714,15 @@ footer {
       h1 {
         font-size: 16px;
       }
-      h2, h3 {
+      h2,
+      h3 {
         font-size: 80px;
       }
     }
     #work {
       > div {
         width: 100%;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         > div {
           margin: 0 0.6%;
