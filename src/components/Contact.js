@@ -6,13 +6,13 @@ const Contact = () => {
       <h3>What's next?</h3>
       <h4>Get in touch</h4>
       <p>
-        Feel free to get in touch with me, drop me a message or just say hi!
-        I'm always open to discussing new projects, creative ideas or new opportunities.
-        Please don't if you are a suspicious king from Nigeria who wants to give me a fortune.
+        Although I'm not currently looking for freelance opportunities, my inbox
+        is always open. Whether for a potential project or just to say hi, I'll
+        try my best to answer your email!
       </p>
       <a href="mailto:mobasergio@gmail.com">Say hello!</a>
     </section>
-  );
+  )
 }
  
 export default Contact;

@@ -1,6 +1,5 @@
 import React from 'react';
 import Profile from '../assets/profile.jpg'
-import Certificate from '../assets/certificate-fullstackopen.png'
 
 const About = () => {
   return (
@@ -16,16 +15,16 @@ const About = () => {
                 websites and web apps.
               </p>
               <p>
-                After 4 years of self directed learning
-                (<a target="_blank" rel="noopener noreferrer" href={Certificate}>Full Stack Open</a>, <a target="_blank" rel="noopener noreferrer" href="https://frontendmasters.com/">Frontend Masters</a>)
-                and working for individuals as a freelancer I decided to do this portfolio, fill it with my best projects and to start looking for a job.
+                After +4 years of self directed learning and working for individuals as a freelancer I joined the
+                <a target="_blank" rel="noopener noreferrer" href="https://www.habitatsoft.com/"> HabitatSoft</a> team
+                where I work as a Frontend Developer.
               </p>
               <p>Here's a few technologies I've been working with recently:</p>
             </div>
             <ul>
               <li>Javascript (ES6+)</li>
               <li>HTML & CSS (LESS)</li>
-              <li>React</li>
+              <li>React / Redux</li>
               <li>React Native</li>
               <li>Vue</li>
               <li>Node.js</li>
