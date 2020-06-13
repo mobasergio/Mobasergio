@@ -23,7 +23,7 @@ const Hero = () => {
         websites and applications.
       </div>
       <div>
-        <a href="mailto:mobasergio@gmail.com">Get in touch</a>
+        <a href="mailto:mobasergio@protonmail.com">Get in touch</a>
       </div>
     </section>
   );
