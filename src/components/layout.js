@@ -1,8 +1,18 @@
-import React from "react"
+import React, {useEffect} from "react"
 import "../styles/layout.css"
 import Logo from '../assets/logo.svg'
 import Menu from '../assets/menu.svg'
 import {Link} from "gatsby"
+
+useEffect(() => {
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    (prevScrollpos > currentScrollPos) ? document.querySelector("header").style.top = "0" : document.querySelector("header").style.top = "-100px";
+    currentScrollPos !== 0 ? document.querySelector("header").classList.add("navbarScroll") : document.querySelector("header").classList.remove("navbarScroll");
+    prevScrollpos = currentScrollPos;
+  }
+})
 
 const sideBar = () => {
   document.querySelector("header > div").classList.toggle("show");

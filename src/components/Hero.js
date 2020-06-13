@@ -1,17 +1,6 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
 const Hero = () => {
-
-  useEffect(() => {
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-      var currentScrollPos = window.pageYOffset;
-      (prevScrollpos > currentScrollPos) ? document.querySelector("header").style.top = "0" : document.querySelector("header").style.top = "-100px";
-      currentScrollPos !== 0 ? document.querySelector("header").classList.add("navbarScroll") : document.querySelector("header").classList.remove("navbarScroll");
-      prevScrollpos = currentScrollPos;
-    }
-  })
-
   return (
     <section id="hero">
       <h1>Hi, my name is</h1>
