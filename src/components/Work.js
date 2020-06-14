@@ -25,7 +25,7 @@ const Work = (props) => {
                   </a>
                 </div>
               </div>
-              <h5>{node.frontmatter.title}</h5>
+              <h4>{node.frontmatter.title}</h4>
               <p>{node.excerpt}</p>
             </div>
             <div>
