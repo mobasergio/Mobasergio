@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
               <img src={Logo} alt="" />
             </Link>
           </div>
-          <div onClick={sideBar} onKeyDown={sideBar} role="button" tabindex="0">
+          <div onClick={sideBar} onKeyDown={sideBar} role="button" tabIndex="0">
             <img src={Menu} alt="" />
           </div>
           <div className="navigation">
