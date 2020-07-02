@@ -439,9 +439,6 @@ main #about > div div:nth-of-type(2) > div a img {
   border-radius: 3px;
   position: relative;
 }
-main #work {
-  height: 1000px;
-}
 main #work h3::before {
   content: "02.";
   display: inline-block;
